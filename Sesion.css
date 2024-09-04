@@ -1,0 +1,46 @@
+body{
+    background-image: url(./img/Nubes.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: rgb(170, 95, 84);
+}
+
+.cuadrado{
+    display: flex;
+    flex-direction: column;
+    padding: 4%;
+    margin: 7% 35%;
+    width: 300px;
+    background-color: rgb(237, 167, 156, 0.5);
+    backdrop-filter: blur(10px);
+    justify-content: center;
+}
+.cuadrado input{
+    padding: 10px;
+    border: none;
+    background-color: rgb(237, 167, 156, 0.5);
+    font-size: 16px;
+}
+.cuadrado button{
+    padding: 10px 40px;
+    border: none;
+    background-color: rgba(241, 199, 193, 0.5);
+    font-size: 14px;
+    color: rgb(170, 95, 84);
+    cursor: pointer;
+}
+.cuadrado button:hover{
+    background-color: rgba(233, 128, 112, 0.5);
+}
+
+/* extra */
+.abajo{
+    display: flex;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+    color:rgb(170, 95, 84);
+}

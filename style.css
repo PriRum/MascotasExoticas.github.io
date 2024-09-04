@@ -1,0 +1,254 @@
+:root {
+    --card-height: 300px;
+    --card-width: calc(var(--card-height) / 1.5);
+}
+    
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ece0d3;
+    color: #e27f61;
+}
+
+
+/*primero el menú*/
+.menu{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    list-style: none;
+    display:flex;
+    justify-content: center;
+    gap: 200px;
+    font-size: 35px;
+    font-style: italic;
+    padding: 10px 0 10px 0;
+}
+a{
+    text-decoration: none;
+    color: #EDA89D;
+}
+.menu li:hover{
+    color: #da8376;
+    cursor: pointer;
+}
+
+/*Ahora la info*/
+.titulos{
+    font-family:allura;
+    font-size: 28px;
+}
+
+.razones {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.cajaR {
+    display: flex;
+    flex-direction: column;
+    background-color: #b3d1ab;
+    color: #66805f;
+    align-items:center;
+    justify-content: space-evenly;
+    perspective: 2000px;
+    padding: 20px 40px 20px 40px;
+    margin: 60px 70px 60px 70px;
+    box-shadow: 20px 20px
+}
+.cajaR:hover {
+    transition: 0.3s;
+    transform: translateY(-10px);
+    background-color: #bed6b8;
+    color: #859b7f;
+}
+
+.explicacion1{
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 36px;
+    margin: 0 50px;
+    font-family:cursive;
+    color: #d1897e;
+    font-size: 22px;
+}
+
+/*slider!*/
+.banner {
+    position: relative;
+	width: auto;
+    height: auto;
+	overflow: hidden;
+}
+
+.banner_info{
+    width: auto;
+    height: auto;
+    padding: 0 40px;
+    color: black;
+    position: absolute;
+}
+
+.eslogan{ 
+    color: #ffffff;
+    font-style: italic;
+    position: absolute;
+    padding: 8% 0 0 35%;
+    font-size: xx-large;
+}
+
+.banner ul {
+	display: flex;
+	padding: 0;
+	width: 800%;
+
+	animation: slide 15s infinite alternate ease-in-out;
+}
+
+.banner li {
+	width: 100%;
+	list-style: none;
+}
+
+.banner img {
+	width: 100%;
+}
+
+@keyframes slide {
+	0% {margin-left: 0;}
+	10% {margin-left: 0;}
+	
+	15% {margin-left: -100%;}
+	20% {margin-left: -100%;}
+	
+	25% {margin-left: -200%;}
+	30% {margin-left: -200%;}
+	
+	35% {margin-left: -300%;}
+	40% {margin-left: -300%;}
+
+    45% {margin-left: -400%;}
+    50% {margin-left: -400%;}
+
+    55% {margin-left: -500%;}
+	60% {margin-left: -500%;}
+	
+    65% {margin-left: -600%;}
+	70% {margin-left: -600%;}
+	
+	75% {margin-left: -700%;}
+	100% {margin-left: -700%;}
+}
+
+/*ANIMALITOSSS!!!*/
+.animales{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.tarjeta {
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 36px;
+    perspective: 2500px;
+    margin: 0 50px;
+}
+
+.sobre_tarjeta {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+    
+.arriba {
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+    
+.tarjeta:hover .arriba {
+    transform: perspective(900px) translateY(-5%)
+    rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px
+    rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 35px 32px -8px
+    rgba(e, e, a, 8.75);
+    -moz-box-shadow: 2px 35px 32px -8px
+    rgba(0, 0, 0, 0.75);
+}
+
+.arriba::before,
+.arriba::after {
+    content:"";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position:absolute;
+    left: 0;
+}
+
+.arriba::before {
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(to top, transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%);
+}
+
+.arriba::after {
+    bottom: 0;
+    opacity: 1;
+    background-image: linear-gradient(to bottom, transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%);
+}
+
+.tarjeta:hover .arriba::before,
+.arriba::after {
+    opacity: 1;
+}
+
+.tarjeta:hover .arriba::after {
+    height: 120px;
+}
+
+a{
+    text-decoration: none;
+}
+.nombre {
+    text-align: center;
+    color: white;
+    width: 100%;
+    transition: transform 0.5s;
+}
+
+.tarjeta:hover .nombre {
+    transform: translate3d(0%,-50px,100px);
+}
+
+.personaje {
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s; 
+    position: absolute;
+    z-index: 1;
+}
+
+.tarjeta:hover .personaje {
+    opacity: 1;
+    transform: translate3d(0%, -30%, 100px);
+}

@@ -1,0 +1,51 @@
+body{
+    background: #ece0d3;
+    color: rgb(233, 147, 166);
+
+}
+/*primero el menú*/
+.menu{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    list-style: none;
+    display:flex;
+    justify-content: center;
+    gap: 200px;
+    font-size: 35px;
+    font-style: italic;
+    padding: 10px 0 10px 0;
+}
+a{
+    text-decoration: none;
+    color: #EDA89D;
+}
+.menu li:hover{
+    color: #da8376;
+    cursor: pointer;
+}
+
+/* comienzo con el banner de fondo */
+.fondo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.contenido{
+    position: absolute;
+    padding: 8% 0 0 18%;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(163, 42, 78);
+}
+.contenido p {
+    color: rgb(188, 216, 240);
+    background-color: rgb(122, 153, 182);
+    padding: 15px;
+}
+.contenido p:hover{
+    cursor: pointer;
+    color: rgb(166, 190, 211);
+    background-color: rgb(105, 132, 156);
+}

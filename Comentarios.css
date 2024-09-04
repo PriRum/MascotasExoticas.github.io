@@ -1,0 +1,59 @@
+body{
+    margin-bottom: 60px;
+    background-color: #ece0d3;
+    color: #95bd8a;
+}
+
+/*primero el menú*/
+.menu{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    list-style: none;
+    display:flex;
+    justify-content: center;
+    gap: 200px;
+    font-size: 35px;
+    font-style: italic;
+    padding: 10px 0 10px 0;
+}
+a{
+    text-decoration: none;
+    color: #EDA89D;
+}
+.menu li:hover{
+    color: #da8376;
+    cursor: pointer;
+}
+
+/*ahora los comentarios*/
+
+.titulos{
+    padding: 3% 0% 3% 25%;
+    font-size: 50px;
+}
+
+.cajas{
+    margin: 0 100px 0 140px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 70px;
+    align-items: flex-end;
+}
+
+.texto{
+    background-color: #9bbcc9;
+    width: 260px;
+    height: 170px;
+    margin: 100px 0 0 0;
+    padding: 100px 20px 0 40px;
+    color: #5d7e8b;
+    box-shadow: 10px 10px;
+}
+.comentario{
+    border-radius: 20%;
+}
+.comentario img{
+    border-radius: 40%;
+    position: absolute;
+    padding: 0px 30px;
+}
